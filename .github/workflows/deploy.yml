@@ -16,3 +16,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           branch: gh-pages
+          FOLDER: .  # Folder to deploy (current directory)
+      - name: Get Deployment URL
+        run: echo "Deployed at https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+
